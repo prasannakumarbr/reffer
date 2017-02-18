@@ -42,7 +42,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-var port = process.env.PORT || 7000;
+var port = process.env.PORT || 3000;
 
 	
 //server listens to the port which is supplied
