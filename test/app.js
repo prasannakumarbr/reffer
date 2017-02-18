@@ -42,6 +42,13 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+var port = process.env.PORT || 7000;
 
-app.listen(3000);
+	
+//server listens to the port which is supplied
+	http.listen(port, function(){
+		logger.info('listening on *:'+port);
+	});
+
+
 module.exports = app;
